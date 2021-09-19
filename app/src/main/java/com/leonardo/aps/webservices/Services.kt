@@ -1,12 +1,10 @@
 package com.leonardo.aps.webservices
 
 import com.leonardo.aps.model.CEP
-import com.leonardo.aps.model.ResultCEP
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface Services {
     @GET(value = "cep/v1/{cep}")
