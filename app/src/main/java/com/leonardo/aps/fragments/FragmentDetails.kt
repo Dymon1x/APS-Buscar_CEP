@@ -39,27 +39,20 @@ class FragmentDetails : Fragment(R.layout.fragment_details) {
 
         searchText?.let { viewModel.getCEP(it) }
 
+        //Criar try catch com  toast
+
         if (searchText != null) {
             Log.i("CEEEEEEEEEEEEEEEEEEP", searchText)
         }
 
-        fragmentDetailsBinding.rvCep.layoutManager =
-            LinearLayoutManager(
-                view.context,
-                RecyclerView.VERTICAL,
-                false
-            )
-
         viewModel.homeView.observe(viewLifecycleOwner, {
-            fragmentDetailsBinding.rvCep.adapter = searchText?.let { it1 -> AdapterCEP(it1, this) }
+
+            binding.resCep.text = it.cep
+            binding.resRua.text = it.street
+            binding.resCidade.text = it.city
+            binding.resEstado.text = it.state
+            binding.resBairro.text = it.neighborhood
         })
-
-
-/*        val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
-            findNavController().navigate(R.id.action_fragmentDetails_to_fragmentHome)
-        }
-
-        callback.isEnabled*/
 
     }
 
