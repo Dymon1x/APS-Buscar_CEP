@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
 
@@ -15,20 +15,20 @@
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/text_searchview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/teal_200"
-            android:layout_marginTop="25dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/red"
             android:iconifiedByDefault="false"
             app:iconifiedByDefault="false"
             app:layout_constraintStart_toStartOf="parent"
-            app:queryHint="Busca"
-            tools:layout_editor_absoluteY="189dp" />
+            app:queryHint="Buscar CEP"
+            tools:layout_editor_absoluteY="189dp"
+            android:textColor="@color/white"/>
 
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -39,31 +39,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/AppBarLayout"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="130dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AppBarLayout">
 
-<!--
-        <include android:id="@+id/include_fl"
-            layout="@layout/fragment_details"/>
--->
-
 
     </FrameLayout>
 
-    <!--    <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:defaultNavHost="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:navGraph="@navigation/nav_graph" />-->
 
 
 </RelativeLayout>

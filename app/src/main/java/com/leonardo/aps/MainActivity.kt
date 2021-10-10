@@ -12,19 +12,19 @@ import com.leonardo.aps.webservices.serviceWEB
 
 @Suppress("CAST_NEVER_SUCCEEDS")
 class MainActivity : AppCompatActivity() {
-    
+
     private lateinit var bind: ActivityMainBinding
-    var searchText : String = ""
+    var searchText: String = ""
 
 
-    private val viewModel by viewModels<HomeViewModel>{
+    private val viewModel by viewModels<HomeViewModel> {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelCLass: Class<T>): T {
                 return HomeViewModel(serviceWEB) as T
             }
         }
     }
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
@@ -44,10 +44,10 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         })
-            }
+    }
 
 
-    private fun goFragDetails(){
+    private fun goFragDetails() {
         val frag = FragmentDetails.newInstance()
         val bundle = Bundle()
         bundle.putString("search", searchText)
