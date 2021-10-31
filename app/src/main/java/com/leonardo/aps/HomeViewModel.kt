@@ -1,6 +1,5 @@
 package com.leonardo.aps
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -23,23 +22,9 @@ class HomeViewModel(private val services: Services) : ViewModel() {
                     this.neighborhood = cep.let { services.getInfoCEP(it).neighborhood }
                     this.service = cep.let { services.getInfoCEP(it).service }
 
-                    /*this.street
-                    this.state
-                    this.city
-                    this.neighborhood
-                    this.service
-*/
-                    Log.i("HOMEVIEW 1", this.cep)
-                    Log.i("HOMEVIEW 2", this.street)
-                    Log.i("HOMEVIEW 3", this.state)
-                    Log.i("HOMEVIEW 4", this.neighborhood)
-                    Log.i("HOMEVIEW 5", this.service)
-
             }
 
         }
-
-
     }
 }
 
