@@ -10,7 +10,6 @@ interface Services {
     @GET(value = "cep/v1/{cep}")
     suspend fun getInfoCEP(
         @Path("cep")name : String
-//        https://brasilapi.com.br/api/cep/v1/{cep}
     ): CEP
 
 }
@@ -23,3 +22,10 @@ val getService: Retrofit = Retrofit.Builder()
     .build()
 
 val serviceWEB: Services = getService.create(Services::class.java)
+
+
+
+
+
+
+

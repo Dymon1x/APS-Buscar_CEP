@@ -1,7 +1,6 @@
 package com.leonardo.aps.model
 
 import com.google.gson.annotations.SerializedName
-import kotlinx.coroutines.CoroutineScope
 import java.io.Serializable
 
 data class CEP(
@@ -12,4 +11,9 @@ data class CEP(
     @SerializedName("street") var street: String= "",
     @SerializedName("service") var service: String= ""
 ): Serializable
+
+
+
+
+
 
