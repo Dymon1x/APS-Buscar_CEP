@@ -9,7 +9,7 @@ import retrofit2.http.Path
 interface Services {
     @GET(value = "cep/v1/{cep}")
     suspend fun getInfoCEP(
-        @Path("cep")name : String
+        @Path("cep") name : String
     ): CEP
 
 }
