@@ -57,6 +57,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     //Dependência Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
     //Dependência Convert Gson
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     //Dependência Fragment ktx
